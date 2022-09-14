@@ -38,7 +38,16 @@ class App extends React.Component{
         this.setState({helpText: 'Changed'})
         console.log('clicked')
     }
-    mouseOver(){console.log('mouse over')}
+
+    mouseOver(){
+        console.log('mouse over')
+    }
+
+    componentDidUpdate(prevProp){
+        if(this.state.helpText !== 'help'){
+            console.log('some')  
+        }      
+    }
 }
 
 export default App
