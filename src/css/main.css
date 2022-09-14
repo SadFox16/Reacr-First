@@ -64,7 +64,7 @@ form button:hover{
     transform: scale(1.1);
 }
 
-form input:not([type='checkbox']), form textarea, form button{
+form input:not([type='checkbox']), form button{
     width: 90%;
     padding: 15px 5%;
     font-family: 'Montserrat', sans-serif;
