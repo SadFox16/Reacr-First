@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'
 //import ReactDOM from 'react-dom/client'
 import * as ReactDOMClien from 'react-dom/client'
+import App from './App'
+import './css/main.css'
 
 //View without JSX
 // ReactDOM.render(React.createElement('input', {
@@ -11,19 +13,10 @@ import * as ReactDOMClien from 'react-dom/client'
 
 
 //View with JSX
-const inputClick = () => console.log('clicked') //creating function and write it to variable
-const mouseOver = () => console.log('mouse over')
-
-const helpText = 'help text'
-const header = 'header'
-
-const elements = (
-    <div className='elements'>
-        <h1>{header}</h1>
-        <input placeholder={helpText} onClick={inputClick} onMouseEnter={mouseOver} />
-        <p>{helpText === 'help text' ? 'Yes' : 'No'}</p>
-    </div>
-)
+// const inputClick = () => console.log('clicked')
+// const mouseOver = () => console.log('mouse over')
+// const helpText = 'help text'
+// const header = 'header'
 
 const app = ReactDOMClien.createRoot(document.getElementById('app'));
-app.render(elements)
+app.render(<App/>)
