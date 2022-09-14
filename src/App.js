@@ -5,22 +5,39 @@ import img1 from './img/img1.png'
 
 class App extends React.Component{
 
-    helpText = 'help text'
-    header = 'header'
+    constructor(props){
+        super(props)
+        this.state = {
+            helpText: 'help text',
+            header: 'site header',
+            userData: ''
+        }
+
+        this.inputClick = this.inputClick.bind(this)
+    }
   
     render(){
       return (
         <div className='elements'>
           <Header title='Site Header'/>
-          <h1>{this.header}</h1>
-          <input placeholder={this.helpText} onClick={this.inputClick} onMouseEnter={this.mouseOver} />
-          <p>{this.helpText === 'help text' ? 'Yes' : 'No'}</p>
+          <h1>{this.state.header}</h1>
+          <h2>{this.state.userData}</h2>
+          <input 
+            onChange={event => this.setState({userData: event.target.value})} 
+            placeholder={this.state.helpText} 
+            onClick={this.inputClick} 
+            onMouseEnter={this.mouseOver} 
+            />
+          <p>{this.state.headerhelpText === 'help text' ? 'Yes' : 'No'}</p>
           <Image image={img1}/>
         </div>
       )
     }
   
-    inputClick(){console.log('clicked')}
+    inputClick(){
+        this.setState({helpText: 'Changed'})
+        console.log('clicked')
+    }
     mouseOver(){console.log('mouse over')}
 }
 
