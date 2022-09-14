@@ -1,1 +1,1 @@
-ReactDOM.render(<h1>Hello</h1>, document.getElementById("appf"))
+ReactDOM.render(<h1>Hello</h1>, document.getElementById("app"))
