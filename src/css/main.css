@@ -24,11 +24,57 @@ main .user{
     padding: 20px;
 }
 
+main .deleteIcon{
+    float: right;
+    color: #134b57;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .editIcon{
+    float: right;
+    margin-right: 25px;
+    color: #165664;
+    cursor: pointer;
+    transform: scale(2);
+}
+
+main .deleteIcon:hover, main .editIcon:hover{
+    opacity: 0.5;
+}
+
 aside{
     width: 20%;
     margin-top: 50px;
     margin-left: 5%;
     float: left;
+}
+
+aside form input[type='checkbox']{
+    margin: 10px;
+}
+
+aside form button{
+    width: 100%;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+
+aside form button:hover{
+    transform: scale(1.1);
+}
+
+aside form input:not([type='checkbox']), aside form textarea, aside form button{
+    width: 90%;
+    padding: 15px 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 0;
+    background: #222;
+    color: #fff;
+    outline: none;
 }
 
 .header{
